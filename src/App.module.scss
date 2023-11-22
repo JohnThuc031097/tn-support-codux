@@ -1,51 +1,53 @@
-.App {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import './styles/media';
+@import './styles/spacing';
+
+.root {
+    height: 100%;
 }
 
-.logo {
-  padding: 1.25em;
-  will-change: filter;
-  transition: filter 300ms;
+.header {
+    margin-bottom: $spacing-6;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.dashboardGrid {
+    display: grid;
+
+    @media only screen and (min-width: #{$media-wide-desktop + 1}) {
+        grid-template-columns: minmax(38rem, 1fr) auto;
+        column-gap: $spacing-4;
+    }
+
+    @media only screen and (max-width: #{$media-wide-desktop}) {
+        row-gap: $spacing-5;
+    }
 }
 
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.mainColumn {
+    display: flex;
+    flex-direction: column;
+    row-gap: $spacing-2-5;
 }
 
-.logo.ts:hover {
-  filter: drop-shadow(0 0 2em #3178c6aa);
-}
+.secondaryColumn {
+    display: flex;
+    flex-direction: column;
+    row-gap: $spacing-5;
 
-.logo.scss:hover {
-  filter: drop-shadow(0 0 2em #cc6698aa);
-}
+    @media only screen and (min-width: #{$media-wide-desktop + 1}) {
+        width: 30rem;
+    }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+    & .userActionsSection {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: $spacing-2;
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
+        @media only screen and (min-width: #{$media-wide-desktop + 1}) {
+            grid-template-columns: 2fr 1fr;
+        }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+        @media only screen and (max-width: #{$media-wide-desktop}) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
 }
