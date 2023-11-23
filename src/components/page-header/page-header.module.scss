@@ -1,0 +1,85 @@
+@import "../../styles/color";
+
+.root {
+    display: flex;
+    align-items: stretch;
+    grid-template-columns: none;
+    align-content: center;
+    justify-content: space-between;
+    justify-items: start;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 2px;
+    overflow: visible;
+    padding: 15px;
+    height: 68px;
+}
+
+.searchPage {
+    flex-grow: 1;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.searchItemPage {
+    position: relative;
+    display: grid;
+}
+
+.userPage {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: end;
+    gap: 10px;
+    width: 60%;
+    height: 100%;
+    cursor: auto;
+}
+
+.userIconPage {
+    color: $color-gray;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-black;
+    }
+}
+
+.userMenuPage {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: start;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-grow: 0;
+    overflow: visible;
+    background-color: $color-white;
+    position: absolute;
+    width: 150px;
+    z-index: 9999;
+    right: 10px;
+    bottom: -60px;
+    border: 1px solid $color-gray;
+    display: block;
+}
+
+.useMenuItemPage {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: start;
+    justify-content: start;
+    overflow: visible;
+    flex-grow: 0;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
