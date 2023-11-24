@@ -13,6 +13,8 @@
     overflow: visible;
     padding: 15px;
     height: 68px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .searchPage {
@@ -22,12 +24,20 @@
     align-items: center;
     justify-items: center;
     align-content: center;
-    justify-content: center;
-}
+    justify-content: start;
+    display: flex;
+    flex-shrink: 0;
 
-.searchItemPage {
-    position: relative;
-    display: grid;
+    .searchInput {
+        position: relative;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        flex-grow: 1;
+        height: 100%;
+        gap: 0px;
+        border-radius: 0px;
+    }
 }
 
 .userPage {
@@ -82,4 +92,17 @@
     width: 100%;
     align-items: center;
     justify-items: center;
+}
+
+.userNoticePage {
+    display: grid;
+    position: relative;
+}
+
+.userNoticeDot {
+    display: block;
+    font-size: 0.5rem;
+    line-height: 1em;
+    z-index: 100;
+    width: auto;
 }

@@ -1,5 +1,5 @@
 import { createBoard } from '@wixc3/react-board';
-import { Sidebar } from '../../../components/sidebar/sidebar';
+import { Sidebar } from '../../../components/side-bar/side-bar';
 
 export default createBoard({
     name: 'Sidebar',

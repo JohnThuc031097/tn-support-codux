@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import Nav from '../nav/nav';
 import { Icon } from '../icon/icon';
-import styles from './sidebar.module.scss';
+import styles from './side-bar.module.scss';
 import LogoImg from '../../assets/logo.png';
 
 interface SidebarProps {
